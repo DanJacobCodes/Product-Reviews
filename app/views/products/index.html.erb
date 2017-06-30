@@ -1,0 +1,9 @@
+<h1>View Products</h1>
+
+<ul>
+   <% @products.each do |product| %>
+     <li><%= link_to product.name, product_path(product) %></li>
+   <% end %>
+ </ul>
+
+<%= link_to "Add product", new_product_path(@product), :class => "btn btn-success" %>
