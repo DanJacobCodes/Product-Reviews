@@ -8,6 +8,7 @@ class Product < ActiveRecord::Base
     .order("reviews_count DESC")
     .limit(5)
     )}
+
   validates :name, :presence => true
   validates :origin, :presence => true
   validates :cost, :presence => true
