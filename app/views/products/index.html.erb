@@ -1,5 +1,14 @@
 <h1>View Products</h1>
 
+
+<h2>Highly Reviewed Products</h2>
+<ul>
+<% @highlyReviewed.each do |most| %>
+<li><%= most.name %></li>
+<% end %>
+</ul>
+
+
 <h2>Recently Added Products</h2>
 <ul>
 <% @recentProducts.each do |recent| %>
@@ -7,6 +16,7 @@
 <% end %>
 </ul>
 
+<hr>
 <ul>
    <% @products.each do |product| %>
      <li><%= link_to product.name, product_path(product) %></li>

@@ -1,12 +1,15 @@
 class ProductsController < ApplicationController
-  def new
-    @product = Product.new
-  end
 
   def index
     @products = Product.all
     @recentProducts = Product.three_most_recent
+    @highlyReviewed = Product.most_reviews
   end
+
+  def new
+    @product = Product.new
+  end
+
 
   def show
     @product = Product.find(params[:id])
