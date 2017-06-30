@@ -1,5 +1,12 @@
 <h1>View Products</h1>
 
+<h2>Recently Added Products</h2>
+<ul>
+<% @recentProducts.each do |recent| %>
+<li><%= recent.name %></li>
+<% end %>
+</ul>
+
 <ul>
    <% @products.each do |product| %>
      <li><%= link_to product.name, product_path(product) %></li>
