@@ -33,6 +33,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
+      flash[:notice] = "Product successfully added!"
       redirect_to products_path
     else
       render :new
@@ -42,5 +43,5 @@ end
 
 private
  def product_params
-  params.require(:product).permit(:name, :origin, :country)
+  params.require(:product).permit(:name, :origin, :cost)
  end
