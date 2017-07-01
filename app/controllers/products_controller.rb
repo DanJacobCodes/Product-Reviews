@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
     @products = Product.all
     @recentProducts = Product.three_most_recent
     @highlyReviewed = Product.most_reviews
+    @local = Product.local
   end
 
   def new

@@ -21,7 +21,8 @@
   <ul>
   <% @product.reviews.each do |review| %>
     <li>
-      <%= review.content_body %> by <%= review.author %>
+      <%= review.content_body %> by <%= review.author %> | Rating <%= review.rating %>
+
     </li>
   <% end %>
 </ul>

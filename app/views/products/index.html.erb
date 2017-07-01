@@ -1,24 +1,30 @@
 <h1 class="jumbotron">Welcome to Moe's</h1>
 <div class="container">
-  <h1>View Products</h1>
 
 
-  <h2>Highly Reviewed Products</h2>
-  <ul>
+  <h2 class="well">Highly Reviewed Products</h2>
+  <ul class="list-group">
     <% @highlyReviewed.each do |most| %>
-    <li><%= most.name %></li>
+    <li class="list-group-item"><%= most.name %></li>
     <% end %>
   </ul>
 
 
-
-
-  <h2>Recently Added Products</h2>
-  <ul>
+  <h2 class="well">Recently Added Products</h2>
+  <ul class="list-group">
     <% @recentProducts.each do |recent| %>
-    <li><%= recent.name %></li>
+    <li class="list-group-item"><%= recent.name %></li>
     <% end %>
   </ul>
+
+  <h2 class="well">Produced in the United States of America</h2>
+  <ul class="list-group">
+    <% @local.each do |usa| %>
+    <li class="list-group-item"><%= usa.name %></li>
+    <% end %>
+  </ul>
+
+  <h1>All Products</h1>
 
   <hr>
   <ul>
