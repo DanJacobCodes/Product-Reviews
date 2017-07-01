@@ -11,8 +11,6 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
 
-
-
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
@@ -41,13 +39,14 @@ class ProductsController < ApplicationController
       render :new
     end
   end
-end
 
-def show
-  @product = Product.find(params[:id])
-end
+  def show
+    @product = Product.find(params[:id])
+  end
+
 
 private
  def product_params
   params.require(:product).permit(:name, :origin, :cost)
  end
+end
