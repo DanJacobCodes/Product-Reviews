@@ -7,7 +7,7 @@ class Product < ActiveRecord::Base
     .joins(:reviews)
     .group("products.id")
     .order("reviews_count DESC")
-    .limit(5)
+    .limit(1)
     )}
 
   validates :name, :presence => true
