@@ -1,4 +1,4 @@
-### By Dan Jacob 6/16/17
+### By Dan Jacob 6/30/17
 
 Epicodus Ruby on Rails Independent Project Week 1 || Rails Basics
 
@@ -8,30 +8,41 @@ Epicodus Ruby on Rails Independent Project Week 1 || Rails Basics
 * Users will be able to filter using scope
 * Users will be able to view details of specific members
 
+## Prerequisites
+* PostgreSQL
+* Ruby/Rails
 
 ## Description
-This project serves as practice with the Angular 2 Framework, more specifically: use of a router to navigate between pages, filtering data with pipes, using a service to share data between multiple components, CRUD functionality, and implementation of components. This web application will allow users to manage a club. In this case, I chose to manage a fictional club called Epicodus FC. Users will be able to add members to the club, edit their details, remove members from the club, and filter members by experience. This application is connected to Firebase so all entries will be saved through the cloud database.
+This project serves as practice with the Ruby on Rails framework. This project simulates a mock website for a grocery store that displays a list of products and reviews for specific products. This application uses PostgreSQL DB to save reviews and product information, and also allows us to manipulate the data using scopes to filter and retrieve data in a specific way. For instance as users add new reviews they will be able to view the newest reviews on the landing page. Additionally, using validations in Rails, we can limit user entry and account for errors.
+
+## Setup and Installation
+* clone this project into your Desktop directory
+  `git clone https://github.com/DanJacobCodes/Product-Reviews`
+
+* Bundle all gems to ensure that application dependencies are running
+  `bundle install`
+
+* Change into this directory and create and initialize the database
+  `cd Product-Reviews`
+  `rake db:create`
+  `rake db:migrate`
+
+##
 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technologies Used
+* HTML
+* CSS
+* Ruby
+* Ruby on Rails
+* PostgreSQL
 
-Things you may want to cover:
-
+### Version
 * Ruby version
+  2.3.1
 
-* System dependencies
+* Rails version
+  5.1.2
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Support and Contact Details
+Should any issues occur, contact me @dansamueljacob@gmail.com
