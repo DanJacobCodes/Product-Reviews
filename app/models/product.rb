@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
   has_many :reviews
-  scope :local, -> { where('origin=?', "USA" )}
+    scope :local, -> { where('origin=?', "United States of America" )}
   scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
   scope :most_reviews, -> {(
     select("products.id, products.name, products.origin, products.cost, count (reviews.id) as reviews_count")

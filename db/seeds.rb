@@ -2,7 +2,7 @@ Product.destroy_all
 
 50.times do |index|
   Product.create!(name: Faker::Food.ingredient,
-                  origin: Faker::Lorem.words(1),
+                  origin: Faker::Address.country,
                   cost: Faker::Commerce.price)
 end
 
