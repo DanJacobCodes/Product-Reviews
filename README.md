@@ -1,7 +1,8 @@
 ### By Dan Jacob 6/30/17
 
 ![Alt text](/app/assets/images/Epicodus.png?raw=true "Epicodus Logo")
-Epicodus Ruby on Rails Independent Project Week 1 || Rails Basics
+
+# Epicodus Ruby on Rails Independent Project Week 1 || Rails Basics
 
 ### Specs
 * Users will be able to add products
