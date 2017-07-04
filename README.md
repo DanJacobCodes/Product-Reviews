@@ -1,6 +1,6 @@
 ### By Dan Jacob 6/30/17
 
-![Alt text](/app/assets/images/Epicodus.png?raw=true "Epicodus Logo")
+![Alt text](/app/assets/images/epicodus_logo.png?raw=true "Epicodus Logo")
 
 # Epicodus Ruby on Rails Independent Project Week 1 || Rails Basics
 
