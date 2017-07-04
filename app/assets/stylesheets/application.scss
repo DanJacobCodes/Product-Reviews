@@ -2,17 +2,57 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.jumbotron {
-  text-align: center;
-  background-color: white;
-}
 
 #navbar {
   background-color: #f04545;
 }
 
 .brand-logo {
-  font-family: 'Monofett', cursive;
-  font-size: 40px;
+  font-family: 'Courgette', cursive;
   color: #d4d730;
+}
+
+form{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  font-size: 8pt;
+}
+
+#no_reviews_message{
+  font-size:12pt;
+}
+
+.jumbotron {
+  text-align:center;
+  font-family: 'Courgette', cursive;
+  font-size: 50px;
+  background-color:	#f04545;
+  color: white;
+}
+
+li{
+
+  font-size: 12pt;
+  text-decoration: underline;
+}
+
+.well {
+
+  font-family: 'Courgette', cursive;
+  background-color:#9DD400;
+  color: white;
+
+  }
+
+.list-group-item{
+  background-color:white;
+  color:black;
+}
+
+#all_products {
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
 }

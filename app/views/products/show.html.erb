@@ -1,31 +1,39 @@
-<h1><%= @product.name %></h1>
-<h1>$<%= @product.cost %></h1>
-<h1>From:<%= @product.origin %></h1>
+<div class="container">
+  <h1><%= @product.name %></h1>
+  <h1>$<%= @product.cost %></h1>
+  <h1>From:<%= @product.origin %></h1>
 
+  <div class="row align-items-start">
+    <div class="col">
+    <p><i class="material-icons">edit</i><%= link_to "Edit", edit_product_path(@product), :class => "btn orange" %></p>
+    </div>
+  </div>
 
+  <div class="col">
+    <p><i class="material-icons">delete</i><%= link_to "Delete", product_path(@product),
+    :data => {:confirm => "You sure?",
+      :method => "delete"}, :class => "btn red " %></p>
+  </div>
 
+  <br>
+  <p><%= link_to "Return to products", products_path, :class => "btn blue" %></p>
 
-<p><%= link_to "Edit", edit_product_path(@product) %></p>
-<p><%= link_to "Delete", product_path(@product),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
-<p><%= link_to "Return to products", products_path %></p>
+  <br>
+  <p><%= link_to "Add a review", new_product_review_path(@product), :class => "btn green" %></p>
 
-<!-- Add path to review -->
-<p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+  <% if @product.reviews.any? %>
+    <hr>
+    <h3>Reviews:</h3>
 
-<% if @product.reviews.any? %>
-<hr>
-  <h3>Reviews:</h3>
+    <ul>
+    <% @product.reviews.each do |review| %>
+      <li>
+        <%= review.content_body %> by <%= review.author %> | Rating <%= review.rating %>
 
-  <ul>
-  <% @product.reviews.each do |review| %>
-    <li>
-      <%= review.content_body %> by <%= review.author %> | Rating <%= review.rating %>
-
-    </li>
+      </li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p id="no_reviews_message">Be the first to add a review!</p>
   <% end %>
-</ul>
-<% else %>
-<p>Be the first to add a review!</p>
-<% end %>
+</div>
